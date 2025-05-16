@@ -34,7 +34,7 @@ router.get("/recipes", async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    res.json(result.meals);
+    res.json(result);
   } catch {
     res.status(500).send("Erro ao buscar receitas");
   }
