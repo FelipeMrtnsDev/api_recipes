@@ -34,9 +34,7 @@ router.get("/recipes", async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    const filteredRecipes = result.meals.map((obj: any) => obj.strMeal)
-
-    res.json(filteredRecipes);
+    res.json(result.meals);
   } catch {
     res.status(500).send("Erro ao buscar receitas");
   }
